@@ -1,0 +1,50 @@
+// tournaments
+.gp-tournaments {
+    @apply tw-flex;
+    @apply tw-flex-col;
+    @apply tw-w-full;
+    height: 50%;
+    background: rgba(137, 200, 236, 0.1);
+    @apply tw-items-center;
+}
+
+
+.gp-tournaments__grid {
+    @apply tw-flex;
+    @apply tw-flex-col;
+    // background: rgba(137, 200, 236, 0.1);
+    height: 78%;
+    width: 90%;
+    @apply tw-gap-4;
+    overflow-y: scroll;
+    @apply tw-px-2;
+     
+}
+
+@screen md {
+    .gp-tournaments__grid {
+
+    }
+}
+
+.gp-card--tournaments {
+    height: 25%;
+}
+
+.gp-card__body--tournaments {
+    @apply tw-block;
+    @apply tw-h-full;
+    padding: 0.2rem;
+}
+
+.gp-card__img--tournaments {
+    @apply tw-h-full;
+}
+
+.gp-tournaments__view-more {
+    @apply tw-block;
+    @apply tw-w-full;
+    height: 20px;
+    background: rgba(137, 200, 236, 0.4);
+    width: 90%;
+}

@@ -1,0 +1,139 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+
+
+$nav : 6;
+$font-size-md : 6;
+$rfs-two-dimensional: true;
+.navbar { 
+    .nav-item {
+
+        .nav-link {
+            // font-size: rfs-fluid-value( 1.2rem);
+            @apply tw-text-sm;
+            // @include font-size( 1.2rem );
+            font-weight: 700;
+        }
+    }
+}
+
+
+.card-body {
+    // @include font-size( 4rem );
+    @apply tw-text-2xl;
+    
+}
+
+
+
+// .gp-card__paragraph {
+//     font-family: 'Open sans';
+//     font-size: rfs-fluid-value( 1rem );
+//     font-weight: 600;
+//     max-width: 50ch;
+//     white-space: nowrap;
+//     overflow: hidden;
+//     text-overflow: ellipsis;
+
+// }
+
+
+.gp-card__title {
+    font-family: 'Open sans';
+    font-size: rfs-fluid-value( 1.3rem );
+    font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 56ch;
+    @apply tw-text-black-1;
+
+}
+
+.gp-card__date {
+    @apply tw-font-normal;
+    @apply tw-text-sm;
+    @apply tw-text-white-900;
+}
+
+.gp-card__more {
+    @apply tw-font-normal;
+    @apply tw-text-sm;
+    @apply tw-text-white-900;
+}
+
+.gp-card__more_link {
+    text-decoration: none;
+}
+
+
+/** ========== main content */
+
+
+// $nav : 6;
+// $font-size-md : 6;
+// $rfs-breakpoint: 1920px;
+$rfs-factor: 7;
+$enable-responsive-font-sizes: true;
+// $rfs-two-dimensional: true;
+
+
+
+
+.gp-card__paragraph {
+    // margin: rfs-fluid-value(1rem) rfs-fluid-value(0.5rem);
+}
+
+
+
+.card-body {
+    // @include font-size( 1rem );
+    @apply tw-text-lg;
+}
+
+
+
+.gp-card__paragraph {
+    font-family: 'Open sans';
+    @apply tw-font-normal;
+    --max-lines: 3;
+    position: relative;
+    max-height: calc(var(--lh) * var(--max-lines));
+    overflow: hidden;
+    padding-right: 1rem; /* space for ellipsis */
+
+}
+
+.gp-card__paragraph::before {
+    position: absolute;
+    content: "...";
+    inset-block-end: 0; /* "bottom" */
+    inset-inline-end: 0; /* "right" */
+}
+
+.gp-card__paragraph::after {
+    content: "";
+    position: absolute;
+    inset-inline-end: 0; /* "right" */
+    @apply tw-w-4;
+    @apply tw-h-4;
+    @apply tw-bg-white-900;
+}
+
+
+.gp-card__title--content {
+    font-size: rfs-fluid-value( 1.2rem );
+    font-weight: 700;
+    max-width: 45ch;
+    @apply tw-text-black-1;
+}
+
+
+
+.gp-card-overlay--p {
+    @apply tw-text-2xl;
+    @apply tw-font-black;
+    @apply tw-no-underline;
+    @apply tw-text-white-900;
+}
+

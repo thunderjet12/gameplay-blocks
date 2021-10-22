@@ -1,0 +1,40 @@
+$font-family-sans-serif: Arial, Helvetica, sans-serif;
+$font-family-serif: Times, 'Times New Roman', serif;
+$primary: rgba( 254, 177, 73, 1 );
+$primary-shade: rgba( 255, 183, 78, 1 );
+$secondry: rgba( 246, 217, 125, 1 );
+$secondry-shade: rgba( 245, 216, 122, 1 );
+$secondry-shade2: rgba( 229, 222, 106, 1 );
+$thirdly: rgba( 255, 128, 1, 1 );
+$fourthly: rgba( 245, 216, 122, 1 );
+$fifthly: rgba( 245, 130, 15, 1 );
+$background: rgba( 200, 200, 200, 1 );
+// $border-radius: 0;
+// $border-radius-sm: 0;
+// $border-radius-lg: 0;
+// $link-color: rgba(24, 24, 24, 0.8);
+$primary-color: rgba(0, 0, 0, 1);
+$secondry-color: rgba(255, 255, 255, 1);
+// $border-radius: 0;
+// $border-radius-sm: 0;
+// $border-radius-lg: 0;
+// $link-color: rgba(24, 24, 24, 0.8);
+$content-header-text-color: rgba(0, 0, 0, 0.6);
+
+
+:root {
+    --guter: @apply tw-w-2vw;
+}
+
+
+
+// container
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px,
+  fluid: calc( var(--vh, 1vw ) * 100 )
+);

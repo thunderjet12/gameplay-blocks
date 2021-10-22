@@ -1,0 +1,25 @@
+.gp-logo {
+    @apply tw-no-underline;
+    @apply tw-text-3xl;
+    @apply tw-font-semibold;
+}
+// .gp-logo__dot {
+    
+// }
+
+
+.gp-nav__link {
+    font-size: rfs-fluid-value( 1.2rem);
+    @apply tw-font-bold;
+    @apply tw-text-gray-700;
+    @apply tw-capitalize;
+
+    // @include font-size( 1.2rem );
+    // font-weight: 700;
+}
+.gp-nav__link {
+    font-size: rfs-fluid-value( 1rem);
+    @apply tw-text-sm;
+    // @include font-size( 1.2rem );
+    // font-weight: 700;
+}

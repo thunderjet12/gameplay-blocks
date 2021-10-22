@@ -1,0 +1,15 @@
+.wp-block-block-builder-container {
+
+	&.has-background {
+		padding: 15px;
+	}
+}
+
+
+
+.wp-site-blocks > *:not(.wp-block-post-content),
+.wp-site-blocks .wp-block-post-content > * {
+	max-width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}

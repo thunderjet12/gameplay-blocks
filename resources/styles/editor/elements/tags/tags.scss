@@ -1,0 +1,139 @@
+@import "./scss/_typography.scss";
+
+.gp-tag {
+    border-radius: 5px;
+    @apply tw-text-white-900;
+    -moz-border-radius: 5px;
+    -webkit-border-radius:5px;
+    @apply  tw-w-16;
+    @apply  tw-h-6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* font-size: rfs-fluid-value(0.7rem); */
+    @apply tw-font-normal;
+    font-variant-caps: normal;
+    @extend .gp-position-top-left;
+    @apply tw-relative;
+    @apply tw-inline-flex;
+    @apply tw-justify-center;
+    @apply tw-align-middle;
+    @apply tw-text-center;
+    @apply tw-box-border;
+    @apply tw-items-center;
+    @apply tw-ml-3;
+    @apply tw-mt-3;
+
+    
+}
+
+// ======= Hero badges ======= 
+.gp-tag--news{
+    @apply tw-bg-orange-400;
+
+}
+
+.gp-tag--hardware{
+    background-color: rgba(172, 172, 172, 0.64);
+
+    
+}
+
+.gp-tag--report{
+    background-color: rgba(255, 0, 0, 0.64);
+}
+
+.gp-tag--review{
+    background-color: rgba(99, 196, 25, 1);
+   
+}
+
+
+// ======= content badges =======  
+.gp-tag--latest-news {
+    @apply  tw-w-12;
+    @apply  tw-h-6;
+    /* font-size: rfs-fluid-value( 0.7rem ); */
+    z-index: 10;
+    position: absolute;
+    @extend .gp-position-top-left;
+    @apply tw-mt-2;
+    @apply tw-ml-2;
+}
+.gp-tag--latest-news--news {
+    background-color: rgba(255, 216, 0, 1);
+}
+
+.gp-tag--latest-news--reviews {
+    background-color: rgba(99, 126, 25, 1);
+}
+
+.gp-tag--latest-news--reports {
+    background-color: rgba(255, 0, 0, 1);
+    opacity: 0.64; 
+}
+
+.gp-content__card__tags__wrapper {
+    @apply tw-flex;
+    @apply tw-my-1;
+    @apply tw-flex-row;
+}
+
+.gp-content__tag__info {
+
+}
+
+.gp-most-popular--tag--info {
+
+}
+
+// ===================== Badges
+   
+ 
+    .gp-badge {
+    color: rgba(218 , 154, 0, 1);
+    @apply tw-bg-none;
+    @apply tw-mx-0;
+    /* font-size: rfs-fluid-value(1rem); */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    @apply tw-font-medium;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    }
+    .gp-badge--latest-news {
+        @apply tw-inline-flex;
+        @apply tw-gap-2;
+    }
+
+    .gp-badge--most-popular {
+        @apply tw-inline-flex;
+        @apply tw-gap-2;
+    }
+    .icon-defaults {
+        margin-right: 5px;
+        font-size: 16px;
+    }
+
+    .icon-time-meter {
+        @extend .icon-defaults;
+        width: 14px;
+        height: 14px;
+    }
+    
+    .icon-views-meter {
+        @extend .icon-defaults;
+        margin-right: 5px;
+        
+        
+    }
+
+    .icon-comments-meter {
+        @extend .icon-defaults;
+       
+
+       
+    }
+
+
+    .continue-dots {
+        color: rgba(255, 0, 0, 1);
+    }

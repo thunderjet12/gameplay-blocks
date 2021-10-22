@@ -1,0 +1,13 @@
+{
+	"name": "gameplayblocks/gpheader",
+	"category": "gameplay-super-blocks",
+	"attributes": {
+		"postsToShow": {
+			"type": "number",
+			"default": 6
+		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ]
+	}
+}

@@ -1,0 +1,6 @@
+{
+  "frontend.js": "autofrontend.js",
+  "admin.js": "autoadmin.js",
+  "frontend.js.map": "autofrontend.js.map",
+  "admin.js.map": "autoadmin.js.map"
+}

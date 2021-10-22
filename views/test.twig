@@ -1,0 +1,15 @@
+
+{% block content %}
+    <div class="content-wrapper">
+        <article class="post-type-{{ attributes }}" id="post-{{ attributes }}">
+            <section class="article-content">
+                <h1 class="article-h1">{{ attributes }}</h1>
+                <h2 class="article-h2">{{ attributes }}</h2>
+                <p class="blog-author">
+                    <span>By</span> {{ attributes }} <span>&bull;</span> {{ attributes }}
+                </p>
+                {{ attributes }}
+            </section>
+        </article>
+    </div>
+{% endblock %}

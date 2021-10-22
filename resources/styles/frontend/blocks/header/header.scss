@@ -1,0 +1,19 @@
+//elements
+
+
+
+// mini blocks
+// @import  "../../mini-blocks/navigation/navigation.scss";
+
+.gp-header {
+    // background: white;
+    border-bottom: 4px solid rgb(243, 11, 11) ;
+    @apply tw-h-16;
+    @apply tw-flex;
+    @apply tw-items-center;
+}
+
+.gp-header__container {
+    @apply tw-mx-auto;
+    @apply tw-px-3;
+}

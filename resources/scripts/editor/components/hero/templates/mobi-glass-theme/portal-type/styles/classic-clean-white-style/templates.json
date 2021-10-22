@@ -1,0 +1,51 @@
+{ "hero-block": {
+        "structure" : {
+            "main" : {
+                "cards": [
+                    {
+                        "title": "reddead redemption 2",
+                        "image-name": "reddead-redemption.jpg",
+                        "tag": "news"
+                    }
+                ]
+            },
+            "others" : {
+                "cards": [
+                    {
+                        "title": "rtx 2080ti",
+                        "image-name": "rtx2080ti.jpg",
+                        "tag": "hardware"
+                    },
+                    {
+                        "title": "just cause 5",
+                        "image-name": "just-cause4.jpg",
+                        "tag": "report"
+                    },
+                    {
+                        "title": "Citizn Con 2948",
+                        "image-name": "just-cause4.jpg",
+                        "icon": "playCircle",
+                        "icon-class": "gp-card__play__icon",
+                        "tag": "news"
+                    },
+                    {
+                        "title": "Reveiw: Breath of the wield",
+                        "image-name": "legendofzelda.jpg",
+                        "tag": "review"
+                    }
+                ]
+            }
+        }
+    },
+    "ads-block": {
+        "structure" : {
+            "title":"Ghost of Tsushima",
+            "action-buttons": {
+                "buy-now": {
+                    "title": "Buy Now",
+                    "link": ""
+                }
+            }
+        }
+    }
+}

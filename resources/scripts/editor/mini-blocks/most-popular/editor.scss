@@ -1,0 +1,13 @@
+.wp-block[data-type="gameplayblocks/most-popular"] {
+
+	&.has-background {
+
+		.wp-block-block-builder-container {
+			padding: 15px;
+
+			p {
+				margin-top: 0;
+			}
+		}
+	}
+}

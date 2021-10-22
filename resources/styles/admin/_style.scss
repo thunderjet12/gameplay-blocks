@@ -1,0 +1,14 @@
+html,body {
+    height:  100vh;
+    height:  calc( var(--vw, 1vh ) * 100 );
+}
+
+
+* {
+    font-family: 'Montserrat','sans-serif';
+    font-size: 16px;
+    
+    // nav.uk-navbar-container:not(.uk-navbar-transparent) {
+    //     background: transparent;
+    // }
+}

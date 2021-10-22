@@ -1,0 +1,78 @@
+/* ------------------------------------------------------------ *\
+    Settings
+\* ------------------------------------------------------------ */
+
+@import '~@styles/admin.config.scss';
+@import '~@styles/shared/_variables.scss';
+
+/* ------------------------------------------------------------ *\
+    Admin
+\* ------------------------------------------------------------ */
+/* ------------------------------------------------------------ *\
+    Settings
+\* ------------------------------------------------------------ */
+
+@import '~@styles/frontend.config.scss';
+@import '~@styles/shared/_variables.scss';
+@import './_variables.scss';
+@import './_sprite.scss';
+@import './layout.scss';
+@import './utilities.scss';
+@import './style.scss';
+@import './variables.scss';
+
+/* ------------------------------------------------------------ *\
+    Theme
+\* ------------------------------------------------------------ */
+
+@import './_generic*.scss';
+
+:root {
+    --gutter: calc( var(--vh, 1vw ) * 2 );
+  }
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    --lh: 1.4rem;
+    line-height: var(--lh);
+}
+
+
+.gp-container--main {
+    top: calc( var(--vh, 1vh ) * 10 );
+    z-index: 1030;
+    position: fixed;
+    @apply tw-h-70vh; 
+    @apply tw-flex; 
+    @apply tw-px-0;
+    @apply tw-gap-10;
+    
+}
+
+
+
+
+
+
+
+/* //elements */
+@import  "./elements/modal.scss";
+@import  "./elements/elements.scss";
+
+/* // import  Super  Blocks  */
+@import  "./blocks/header/header.scss";
+@import  "./blocks/hero/hero.scss";
+@import  "./blocks/main-content/main-content.scss";
+@import  "./blocks/footer/footer.scss";
+
+/* // import  Mini  Blocks  */
+@import  "./blocks/navigation/navigation.scss";
+@import  "./blocks/latest-news/latestNews.scss";
+@import  "./blocks/most-popular/mostPopular.scss";
+@import  "./blocks/ads/ads.scss";
+@import  "./blocks/videos/videos.scss";
+@import  "./blocks/streaming/streaming.scss";

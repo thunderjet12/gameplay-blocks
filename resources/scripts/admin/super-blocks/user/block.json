@@ -1,0 +1,20 @@
+{
+	"name": "block-builder/container",
+	"category": "gameplay-super-blocks",
+	"attributes": {
+		"className": {
+			"type": "string"
+		},
+		"content": {
+			"type": "string"
+		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ],
+		"anchor": true,
+		"__experimentalColor": {
+			"gradients": true,
+			"linkColor": true
+		}
+	}
+}

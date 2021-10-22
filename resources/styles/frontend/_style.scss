@@ -1,0 +1,48 @@
+html,body {
+    height:  100vh;
+    height:  calc( var(--vw, 1vh ) * 100 );
+}
+
+
+* {
+    font-family: 'Montserrat','sans-serif';
+    font-size: 16px;
+    
+    // nav.uk-navbar-container:not(.uk-navbar-transparent) {
+    //     background: transparent;
+    // }
+}
+
+.container-fluid {
+    @extend .tw-container;
+}
+// .container-lg {
+//     @apply tw-container
+// }
+
+
+.tw-container {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+@media (min-width: 576px) {
+    .tw-container {
+        max-width: 576px
+    }
+}
+@media (min-width: 768px) {
+    .tw-container {
+        max-width: 768px
+    }
+}
+@media (min-width: 992px) {
+    .tw-container {
+        max-width: 992px
+    }
+}
+@media (min-width: 1200px) {
+    .tw-container {
+        max-width: 1200px
+    }
+}

@@ -1,0 +1,77 @@
+/* ------------------------------------------------------------ *\
+    Vendor
+\* ------------------------------------------------------------ */
+
+@import './vendor/*.scss';
+
+/* ------------------------------------------------------------ *\
+    Settings
+\* ------------------------------------------------------------ */
+
+@import '~@styles/frontend.config.scss';
+@import '~@styles/shared/_variables.scss';
+@import './_variables.scss';
+@import './_sprite.scss';
+@import './_layout.scss';
+@import './_utilities.scss';
+@import './_style.scss';
+@import './_variables.scss';
+@import url("https://code.iconify.design/css/line-md.css" );
+@import "../../scripts/frontend/blocks/hero/components/style-iconify/style.scss";
+
+/* ------------------------------------------------------------ *\
+    Theme
+\* ------------------------------------------------------------ */
+
+@import './_generic*.scss';
+
+:root {
+    --gutter: calc( var(--vh, 1vw ) * 2 );
+  }
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    --lh: 1.4rem;
+    line-height: var(--lh);
+}
+
+
+.gp-container--main {
+    top: calc( var(--vh, 1vh ) * 10 );
+    z-index: 1030;
+    position: fixed;
+    height: calc( var(--vh, 1vh ) * 70 );
+    display: flex; 
+    padding-left: 0;
+    padding-right: 0;
+    gap: 2.5rem;
+    
+}
+
+
+
+
+
+
+
+/* //elements */
+@import  "./elements/modal.scss";
+@import  "./elements/elements.scss";
+
+/* // import  Super  Blocks  */
+@import  "./blocks/header/header.scss";
+@import  "./blocks/hero/hero.scss";
+@import  "./blocks/main-content/main-content.scss";
+@import  "./blocks/footer/footer.scss";
+
+/* // import  Mini  Blocks  */
+@import  "./blocks/navigation/navigation.scss";
+@import  "./blocks/latest-news/latestNews.scss";
+@import  "./blocks/most-popular/mostPopular.scss";
+@import  "./blocks/ads/ads.scss";
+@import  "./blocks/videos/videos.scss";
+@import  "./blocks/streaming/streaming.scss";

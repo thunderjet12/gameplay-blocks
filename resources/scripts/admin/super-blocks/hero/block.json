@@ -1,0 +1,56 @@
+{
+	"name": "gameplayblocks/hero",
+	"category": "gameplay-super-blocks",
+	"attributes": {
+		"className": {
+			"type": "string"
+		},
+		"content": {
+			"type": "string"
+		},
+		"alignment": {
+            "type": "string",
+            "default": "none"
+		},
+		"date": {
+            "type": "number",
+            "default": "none"
+		},
+		"myRichHeading": {
+			"type": "string"
+		},
+		"myRichText": {
+			"type": "string",
+			"source": "html",
+			"selector": "p"
+		},
+		"toggle": {
+			"type": "boolean",
+			"default": true
+		},
+		"favoriteAnimal": {
+			"type": "string",
+			"default": "dogs"
+		},
+		"favoriteColor": {
+			"type": "string",
+			"default": "#DDDDDD"
+		},
+		"activateLasers": {
+			"type": "boolean",
+			"default": false
+		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ],
+		"anchor": true,
+		"__experimentalColor": {
+			"gradients": true,
+			"linkColor": true
+		}
+	},
+	"editorScript": "file:../../../../dist/editor.js",
+	"editorStyle": "file:./resources/dist/styles/editor.min.css"
+
+	
+}

@@ -1,0 +1,25 @@
+{
+	"name": "gameplayblocks/footer",
+	"category": "gameplay-super-blocks",
+	"attributes": {
+		"className": {
+			"type": "string",
+			"default": "tw-bg-yellow-200"
+		},
+		"content": {
+			"type": "string"
+		},
+		"currentTheme": {
+			"type": "string",
+			"default": "cleanreddredmp"
+		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ],
+		"anchor": true,
+		"__experimentalColor": {
+			"gradients": true,
+			"linkColor": true
+		}
+	}
+}

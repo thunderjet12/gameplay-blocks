@@ -1,0 +1,21 @@
+{
+	"style": "file:../../../../dist/styles/editor.min.css",
+	"name": "gameplayblocks/latest-news",
+	"category": "gameplay-mini-blocks",
+	"attributes": {
+		"className": {
+			"type": "string"
+		},
+		"content": {
+			"type": "string"
+		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ],
+		"anchor": true,
+		"__experimentalColor": {
+			"gradients": true,
+			"linkColor": true
+		}
+	}
+}

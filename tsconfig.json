@@ -1,0 +1,112 @@
+{
+    "$schema": "https://json.schemastore.org/tsconfig",
+    "display": "Svelte",
+    "compilerOptions": {
+      "jsx": "react-jsx",
+      "noImplicitAny": false,
+      // "rootDirs": [ "./resources/scripts/admin", "./resources/scripts/frontend" ],
+      // "outDir": "build",
+      "preserveConstEnums": true,
+      "removeComments": true,
+      "sourceMap": true,
+      "target": "esnext",
+      "baseUrl": "./",
+      "paths": {
+        "math/*": [
+          "common/tools/utils/helpers/math/*"
+        ],
+        "resources/scripts/admin/*":[ "resources/scripts/admin/*" ],
+        "resources/scripts/frontend/*":[ "resources/scripts/frontend/*" ],
+        "resources/scripts/admin/components/*":[ "resources/scripts/admin/components/*" ]
+      },
+      "allowJs": true,
+      "skipLibCheck": true,
+      "esModuleInterop": true,
+      "allowSyntheticDefaultImports": true,
+      "strict": false,
+      "forceConsistentCasingInFileNames": true,
+      "noFallthroughCasesInSwitch": true,
+      "module": "esnext",
+      "moduleResolution": "node",
+      "resolveJsonModule": true,
+      "isolatedModules": true,
+      "declaration": true,
+      "declarationDir": "build",
+      "emitDeclarationOnly": false,
+      "lib": [
+        "dom",
+        "dom.iterable",
+        "esnext"
+      ],
+          /** 
+        Svelte Preprocess cannot figure out whether you have a value or a type, so tell TypeScript
+        to enforce using `import type` instead of `import` for Types.
+      */
+      "importsNotUsedAsValues": "error",
+
+      "typeRoots": [
+        "./typings",
+        "node_modules/@types"
+
+      ],
+      /**
+        To have warnings/errors of the Svelte compiler at the correct position,
+        enable source maps by default.
+      */
+      /** Requests the runtime types from the svelte modules by default. Needed for TS files or else you get errors. */
+      "types": [
+        "node",
+        "svelte",
+        "svelte/store",
+        "svelte/motion",
+        "svelte/transition",
+        "svelte/animate",
+        "svelte/easing"
+      ]
+    },
+    "include": [
+      "resources/scripts/admin/*",
+      "resources/scripts/frontend/*"
+    ],
+    "exclude": ["./node_modules",  "./typings"]
+    // "exclude": ["./node_modules",  "__sapper__/*"]
+    
+
+  }
+
+// {
+// 	"compilerOptions": {
+// 		// Target latest version of ECMAScript.
+// 		"target": "esnext",
+//     "module": "commonjs",
+// 		// Search under node_modules for non-relative imports.
+// 		"moduleResolution": "node",
+// 		// Process & infer types from .js files.
+// 		"allowJs": true,
+// 		// Don't emit; allow Babel to transform files.
+// 		"noEmit": true,
+// 		// Enable strictest settings like strictNullChecks & noImplicitAny.
+// 		"strict": true,
+// 		// Disallow features that require cross-file information for emit.
+// 		"isolatedModules": true,
+// 		// Import non-ES modules as default imports.
+// 		"esModuleInterop": true,
+//     "typeRoots": [
+//       "node_modules/@types",
+//       "./typings"
+//     ],
+//         "types": [
+//         "node",
+//         "svelte",
+//         "svelte/store",
+//         "svelte/motion",
+//         "svelte/transition",
+//         "svelte/animate",
+//         "svelte/easing"
+//       ]
+// 	},
+// 	"include": [
+// 		"resources/scripts/"
+// 	],
+
+// }

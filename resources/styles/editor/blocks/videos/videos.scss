@@ -1,0 +1,127 @@
+.gp-section--videos {
+    @apply tw-mt-64;
+}
+
+.gp-videos__container {
+    @apply tw-overflow-x-auto;
+}
+
+.gp-videos__grid {
+    @apply tw-grid;
+    @apply tw-grid-flow-col-dense;
+    @apply tw-grid-rows-2;
+    @apply tw-gap-8;
+    grid-auto-columns: minmax(260px, 1fr);
+}
+
+#videos {
+    .uk-card-media-top {
+        width: 284px;
+        height: 176px;
+    
+
+        a {
+           
+            color: rgba(255, 255, 255, 1);
+            padding: 0;
+            color: rgba(243, 11, 11, 1);
+
+            
+        }
+    }
+
+    li {
+        width: 284px;
+   
+
+        .uk-card {
+            width: 284px;
+        }
+        .uk-flex-column {
+            width: 284px;
+        }
+        .uk-card-body {
+            width: 284px !important;
+            height: 55px;
+
+            
+            a>span {
+                width: 284px;
+            font-family: 'Open sans';
+            font-weight: 700;
+            font-size: 18px;
+            }
+        }
+    }
+}
+
+
+.gm-video-icon-spin {
+    color: rgba(255, 0, 0, 1);
+    background: rgba(0, 0, 0, 1);
+    // position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 981;
+}
+
+.gp-videos__title {
+    @apply tw-flex;
+    @apply tw-w-full;
+    @apply tw-mb-4;
+}
+
+.gp-videos__title__link {
+    @apply tw-font-bold;
+    @apply tw-text-4xl;
+}
+
+.gp-videos__navigation {
+    @apply tw-inline-flex;
+    @apply tw-justify-between;
+    @apply tw-w-full;
+    @apply tw-mb-4;
+}
+
+
+.gp-videos__navigation__previous {
+    @apply tw-flex;
+    @apply tw-items-center;
+    @apply tw-gap-x-2;
+
+}
+
+.gp-videos__navigation__previous__icon {
+    @apply tw-text-gray-400;
+}
+
+.gp-videos__navigation__next {
+    @apply tw-flex;
+    @apply tw-items-center;
+    @apply tw-gap-x-2;
+}
+
+.gp-videos__navigation__next__icon {
+
+}
+
+.gp-card--videos {
+    @apply tw-col-span-1;
+    @apply tw-row-span-1;
+    @apply tw-border-0;
+    @apply tw-bg-transparent;
+    
+}
+
+.gp-card__media--videos {
+        @apply tw-relative;
+}
+
+.gp-card__play--videos {
+    // uk-overlay uk-position-center gm-video-icon
+    color: rgba(255, 0, 0, 1);
+}
+
+

@@ -1,0 +1,15 @@
+li.nav-item {
+    font-size: rfs-fluid-value( 1.2rem);
+    @apply tw-font-bold;
+    @apply tw-text-gray-700;
+    @apply tw-capitalize;
+
+    // @include font-size( 1.2rem );
+    // font-weight: 700;
+    .nav-link {
+        font-size: rfs-fluid-value( 1rem);
+        // @include font-size( 1.2rem );
+        // font-weight: 700;
+    }
+}
+

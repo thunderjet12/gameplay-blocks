@@ -1,0 +1,148 @@
+const toml = require( 'toml' );
+const defaultConfig = require( '@wordpress/scripts/config/webpack.config' );
+const BrowserSyncPlugin = require( 'browser-sync-webpack-plugin' );
+let localEnv = '';
+
+// Check if local.json exists
+try {
+	localEnv = require( './local.json' ).devURL;
+} catch ( err ) {
+	// Fallback if it does not
+	localEnv = 'https://iceberg.test';
+}
+
+module.exports = {
+	...defaultConfig,
+	entry: {
+		...defaultConfig.entry,
+		client: './client/client.tsx',
+	
+		
+	},
+	
+	resolve: {
+		extensions: [".js", ".jsx", ".json", ".ts", ".tsx"],
+	},
+
+	module: {
+		...defaultConfig.module,
+		rules: [
+			...defaultConfig.module.rules,
+			{
+				test: /.toml/,
+				type: 'json',
+				parser: {
+					parse: toml.parse,
+				},
+			},
+			{
+				test: /\.(ts|tsx)$/,
+				loader: "awesome-typescript-loader",
+			},
+		],
+	},
+	optimization: {
+		...defaultConfig.optimization,
+	},
+	plugins: [
+		...defaultConfig.plugins,
+		new BrowserSyncPlugin(
+			{
+				host: 'localhost',
+				port: 3000,
+				proxy: localEnv,
+				open: true,
+				files: [ 'build/*.php', 'build/*.js', 'build/*.css' ],
+			},
+			{
+				injectCss: true,
+				reload: false,
+			}
+		),
+	],
+};
+
+
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const path = require('path');
+
+const mode = process.env.NODE_ENV || 'development';
+const prod = mode === 'production';
+
+module.exports = {
+	entry: {
+		'build/bundle': ['./src/main.js']
+	},
+	resolve: {
+		alias: {
+			svelte: path.dirname(require.resolve('svelte/package.json'))
+		},
+		extensions: ['.mjs', '.js', '.svelte'],
+		mainFields: ['svelte', 'browser', 'module', 'main']
+	},
+	output: {
+		path: path.join(__dirname, '/public'),
+		filename: '[name].js',
+		chunkFilename: '[name].[id].js'
+	},
+	module: {
+		rules: [
+
+			{
+				test: /\.css$/,
+				use: [
+					MiniCssExtractPlugin.loader,
+					'css-loader'
+				]
+			},
+			{
+				// required to prevent errors from Svelte on Webpack 5+
+				test: /node_modules\/svelte\/.*\.mjs$/,
+				resolve: {
+					fullySpecified: false
+				}
+			}
+		]
+	},
+
+};
+
+
+//package.json
+
+  "scripts": {
+    "build": "npm-run-all makepot build-assets build-frontend",
+    "build-frontend": "cross-env NODE_ENV=production webpack",
+    "build-assets": "wp-scripts build",
+    "check-engines": "wp-scripts check-engines",
+    "check-licenses": "wp-scripts check-licenses",
+    "format:js": "wp-scripts format-js",
+    "lint:css": "wp-scripts lint-style '**/*.scss'",
+    "lint:css-fix": "wp-scripts lint-style '**/*.scss' --fix",
+    "lint:js": "wp-scripts lint-js '**/*.js'",
+    "lint:js-fix": "wp-scripts lint-js '**/*.js' --fix",
+    "lint:pkg-json": "wp-scripts lint-pkg-json",
+    "start": "cross-env NODE_ENV=development webpack --color --config resources/build/webpack.development.js",
+    "test:e2e": "wp-scripts test-e2e",
+    "test:unit": "wp-scripts test-unit-js",
+    "makepot": "wp i18n make-pot . languages/block-builder.pot --exclude=node_modules,vendor,build",
+    "postinstall": "wp-scripts build && composer install",
+    "hot": "cross-env NODE_ENV=hot webpack-dev-server --colors --config resources/build/webpack.development.js",
+    "build:debug": "cross-env NODE_ENV=debug webpack --colors --config resources/build/webpack.production.js",
+    "build:production": "cross-env NODE_ENV=production webpack --colors --config resources/build/webpack.production.js",
+    "lint": "run-s -cl lint:wpcs lint:scripts lint:styles",
+    "lint-fix": "run-s -cl lint-fix:wpcs lint-fix:scripts lint-fix:styles",
+    "lint:wpcs": "./vendor/bin/phpcs --colors --standard=phpcs.xml ./",
+    "lint:scripts": "eslint --color ./resources/scripts/**",
+    "lint:styles": "stylelint --color ./resources/styles/**",
+    "lint-fix:wpcs": "./vendor/bin/phpcbf --colors --standard=wpcs.xml ./",
+    "lint-fix:scripts": "eslint --color --fix ./resources/scripts/**",
+    "lint-fix:styles": "stylelint --color --fix ./resources/styles/**",
+    "i18n": "run-s -cl i18n:textdomain i18n:pot",
+    "i18n:textdomain": "wpi18n addtextdomain --exclude=dist,node_modules,resources,tests,vendor --textdomain=gameplay_blocks",
+    "i18n:pot": "wpi18n makepot --exclude=dist,node_modules,resources,tests,vendor --type=wp-plugin --domain-path=languages/ --pot-file=gameplay_blocks.pot --textdomain=gameplay_blocks",
+    "rebrand": "node resources/build/rebrand/rebrand.js",
+    "release": "run-s build release:zip",
+    "release:zip": "node resources/build/release/release.js wpemerge-release",
+    "validate": "svelte-check"
+

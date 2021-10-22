@@ -1,0 +1,44 @@
+.gp-card__paragraph {
+    // margin: rfs-fluid-value(1rem) rfs-fluid-value(0.5rem);
+}
+
+
+
+.card-body {
+    // @include font-size( 1rem );
+    @apply tw-text-lg;
+}
+
+
+
+.gp-card--paragraph {
+    font-family: 'Open sans';
+    font-size: rfs-fluid-value( 1rem );
+    @apply tw-font-normal;
+    max-width: 56ch;
+    overflow: hidden;
+    @apply tw-text-black-3;
+    text-overflow: ellipsis;
+
+}
+
+
+.gp-card--title {
+    font-family: 'Open sans';
+    font-size: rfs-fluid-value( 1.2rem );
+    font-weight: 700;
+    max-width: 55ch;
+    // white-space: pre;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    @apply tw-text-black-1;
+}
+
+
+
+.gp-card-overlay--p {
+    @apply tw-text-2xl;
+    @apply tw-font-black;
+    @apply tw-no-underline;
+    @apply tw-text-white-900;
+}

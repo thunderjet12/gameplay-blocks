@@ -1,0 +1,10 @@
+.gp-card__title--most-popular {
+    font-family: 'Open sans';
+    @apply tw-font-medium;
+    white-space: pre-line;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 200ch;
+    @apply tw-text-black-1;
+    @apply tw-text-lg;
+}

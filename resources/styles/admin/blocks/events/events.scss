@@ -1,0 +1,25 @@
+
+.gp-events {
+    @apply tw-w-12vw;
+    // background: rgba($color: #90b3f9, $alpha: 0.5);
+    @apply tw-flex;
+    @apply tw-flex-col;
+    @apply tw-items-center;
+}
+
+.gp-events__title {
+    
+}
+
+
+.gp-accordion--events {
+    width: 90%;
+}
+
+.gp-accordion__item--events {
+    max-height: 100px;
+}
+
+.gp-accordion-collapse--events {
+   
+}

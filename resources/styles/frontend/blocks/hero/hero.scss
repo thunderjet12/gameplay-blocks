@@ -1,0 +1,81 @@
+@import "./scss/_typography.scss";
+.gp-hero__grid {
+    @apply tw-grid;
+    @apply tw-w-full;
+    @apply tw-grid-cols-1;
+    @apply tw-grid-flow-row;
+    @apply tw-gap-4;
+}
+
+@screen sm {
+    .gp-hero__grid {
+    @apply tw-grid-cols-2;
+    @apply tw-grid-rows-hero-row-3;
+    }
+
+    .gp-card--hero__main {
+        @apply tw-col-span-1;
+        @apply tw-row-span-3;
+    }
+
+    .gp-card--hero__other {
+        @apply tw-col-span-1;
+        @apply tw-row-span-1;
+    }
+}  
+
+@screen md {
+    .gp-hero__grid {
+    @apply tw-grid-cols-3 ;
+    @apply tw-grid-rows-hero-row-2 ;
+    }
+
+    .gp-card--hero__main {
+        @apply tw-col-span-1;
+        @apply tw-row-span-2;
+    }
+
+    .gp-card--hero__other {
+        @apply tw-col-span-1;
+        @apply tw-row-span-1;
+    }
+}  
+
+
+
+
+.gp-card--hero {
+    @extend .gp-cover-container;
+    @apply tw-w-full;
+    @apply tw-h-full; 
+    @apply tw-rounded-md;
+    border: 1px solid rgba(153, 153, 153, 1);
+}
+
+
+.gp-card__img--hero {
+    @apply tw-h-full;
+    @apply tw-w-full;
+}
+
+
+
+
+.gp-card__img__overlay--hero {
+
+}
+
+
+.gp-card__title--hero {
+    @apply tw-items-center;
+    @extend .gp-position-bottom-center ;
+    @apply tw-align-text-bottom ;
+    @apply tw-absolute;
+    @apply tw-mb-3;
+    // color: $secondry-color;
+    transition: 0.5s;
+}
+
+.gp-card__title--hero:hover {
+    color: rgba(251, 82, 82, 1) ;
+}

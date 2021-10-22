@@ -1,0 +1,17 @@
+{
+	"name": "gameplayblocks/gpmaincontent",
+	"category": "gameplay-super-blocks",
+	"attributes": {
+		"postsToShow": {
+			"type": "number",
+			"default": 6
+		},
+		"currentTheme": {
+			"type": "string",
+			"default": "cleanreddredmp"
+		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ]
+	}
+}

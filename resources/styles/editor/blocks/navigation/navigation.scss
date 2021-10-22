@@ -1,0 +1,74 @@
+// navigation Mini Block
+@import "./scss/_typography.scss";
+.gp-logo {
+    @apply tw-text-black-900;
+}
+.gp-logo__dot {
+    color: rgba(255, 0, 0, 0.64);
+}
+.gp-copllapse {
+    @apply tw-hidden;
+}
+
+@screen md  {
+    .gp-copllapse {
+        @apply tw-block;
+    }
+}
+
+.gp-navbar-copllapse {
+    // @extend .navbar-collapse;
+    @apply tw-flex;
+}
+ 
+
+.gp-navbar__nav {
+    @apply tw-flex;
+    @apply tw-justify-between;
+}
+
+.gp-navbar__nav--header {
+    // margin-left: rfs-fluid-value(6rem);
+    @apply tw-gap-10;
+    
+}
+
+
+
+// .gp-nav__item {
+   
+// }
+
+// .gp-nav__link {
+//     @extend .nav-link;
+// }
+
+
+.gp-nav__item--content {
+    @apply tw-text-2xl;
+}
+
+.gp-nav__link--content {
+    @apply tw-text-black-900;
+    @apply  tw-pr-1;
+}
+
+
+.gp-navbar--content {
+    @apply tw-border-gold-1;
+    @apply tw-border-solid;
+    @apply tw-border-2;
+    @apply tw-bg-gray-200; 
+    @apply tw-text-black-900;
+    
+}
+
+
+
+.gp-form__input--search {
+    // border: ;
+}
+
+.gp-search__input {
+    
+}
